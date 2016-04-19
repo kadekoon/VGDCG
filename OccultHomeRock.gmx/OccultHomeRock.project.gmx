@@ -9,10 +9,14 @@
     <sprite>sprites\BlankCard_Placeholder</sprite>
     <sprite>sprites\PlayButton</sprite>
     <sprite>sprites\PeasantSprite</sprite>
+    <sprite>sprites\DeckGridSprite</sprite>
+    <sprite>sprites\DefaultDeckSprite</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
-  <scripts name="scripts"/>
+  <scripts name="scripts">
+    <script>scripts\Game_Start_Script.gml</script>
+  </scripts>
   <objects name="objects">
     <object>objects\Deck</object>
     <objects name="Creatures">
@@ -24,7 +28,13 @@
       <object>objects\Creature</object>
       <object>objects\Card</object>
     </objects>
-    <object>objects\PlayButtonObj</object>
+    <objects name="Buttons">
+      <object>objects\PlayButtonObj</object>
+      <object>objects\DefaultDeckButton</object>
+    </objects>
+    <objects name="BKG">
+      <object>objects\DeckGridObj</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\Menu</room>
