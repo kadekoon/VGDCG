@@ -6,16 +6,30 @@
   <NewExtensions/>
   <sounds name="sound"/>
   <sprites name="sprites">
-    <sprite>sprites\BlankCard_Placeholder</sprite>
-    <sprite>sprites\PlayButton</sprite>
-    <sprite>sprites\PeasantSprite</sprite>
-    <sprite>sprites\DeckGridSprite</sprite>
-    <sprite>sprites\DefaultDeckSprite</sprite>
+    <sprites name="CardArt">
+      <sprite>sprites\PeasantSprite</sprite>
+      <sprite>sprites\BlankCard_Placeholder</sprite>
+      <sprite>sprites\GhostSprite</sprite>
+    </sprites>
+    <sprites name="Interface">
+      <sprite>sprites\PlayerHandAreaSprite</sprite>
+      <sprite>sprites\PlayButton</sprite>
+      <sprites name="Menu">
+        <sprite>sprites\DefaultDeckSprite</sprite>
+        <sprite>sprites\DeckGridSprite</sprite>
+      </sprites>
+    </sprites>
   </sprites>
-  <backgrounds name="background"/>
+  <backgrounds name="background">
+    <background>background\BoardBKG</background>
+  </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\Game_Start_Script.gml</script>
+    <script>scripts\Draw_Cards_Script.gml</script>
+    <script>scripts\Draw_Stats_Script.gml</script>
+    <script>scripts\Minion_Combat_Script.gml</script>
+    <script>scripts\Create_Deck_Script.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\Deck</object>
@@ -23,10 +37,14 @@
       <objects name="0 Drops">
         <object>objects\Mildly_Infuriated_Peasant</object>
       </objects>
+      <objects name="4 Drops">
+        <object>objects\Hateful_Spirit</object>
+      </objects>
     </objects>
     <objects name="Parents">
       <object>objects\Creature</object>
       <object>objects\Card</object>
+      <object>objects\AIParent</object>
     </objects>
     <objects name="Buttons">
       <object>objects\PlayButtonObj</object>
@@ -34,6 +52,13 @@
     </objects>
     <objects name="BKG">
       <object>objects\DeckGridObj</object>
+    </objects>
+    <objects name="AIPlayers">
+      <object>objects\PeasantAI</object>
+    </objects>
+    <object>objects\HandController</object>
+    <objects name="Controllers">
+      <object>objects\EnemyHandController</object>
     </objects>
   </objects>
   <rooms name="rooms">
