@@ -30,9 +30,10 @@
     <script>scripts\Draw_Stats_Script.gml</script>
     <script>scripts\Minion_Combat_Script.gml</script>
     <script>scripts\Create_Deck_Script.gml</script>
+    <script>scripts\Game_End_Script.gml</script>
+    <script>scripts\Place_Card_In_Hand.gml</script>
   </scripts>
   <objects name="objects">
-    <object>objects\Deck</object>
     <objects name="Creatures">
       <objects name="0 Drops">
         <object>objects\Mildly_Infuriated_Peasant</object>
@@ -47,8 +48,12 @@
       <object>objects\AIParent</object>
     </objects>
     <objects name="Buttons">
-      <object>objects\PlayButtonObj</object>
-      <object>objects\DefaultDeckButton</object>
+      <objects name="MainMenu">
+        <object>objects\PlayButtonObj</object>
+      </objects>
+      <objects name="DeckSelectionScreen">
+        <object>objects\DefaultDeckButton</object>
+      </objects>
     </objects>
     <objects name="BKG">
       <object>objects\DeckGridObj</object>
@@ -56,9 +61,10 @@
     <objects name="AIPlayers">
       <object>objects\PeasantAI</object>
     </objects>
-    <object>objects\HandController</object>
     <objects name="Controllers">
+      <object>objects\HandController</object>
       <object>objects\EnemyHandController</object>
+      <object>objects\PlayerDeck</object>
     </objects>
   </objects>
   <rooms name="rooms">
