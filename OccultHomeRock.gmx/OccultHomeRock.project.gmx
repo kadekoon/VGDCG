@@ -18,6 +18,7 @@
         <sprite>sprites\DefaultDeckSprite</sprite>
         <sprite>sprites\DeckGridSprite</sprite>
       </sprites>
+      <sprite>sprites\GhostDeckSprite</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background">
@@ -32,8 +33,18 @@
     <script>scripts\Create_Deck_Script.gml</script>
     <script>scripts\Game_End_Script.gml</script>
     <script>scripts\Place_Card_In_Hand.gml</script>
+    <scripts name="Particles">
+      <script>scripts\GhostlyParticleBattleCry.gml</script>
+      <script>scripts\DestroyPartSys.gml</script>
+    </scripts>
   </scripts>
   <objects name="objects">
+    <objects name="Parents">
+      <object>objects\Hero</object>
+      <object>objects\Creature</object>
+      <object>objects\Card</object>
+      <object>objects\AIParent</object>
+    </objects>
     <objects name="Creatures">
       <objects name="0 Drops">
         <object>objects\Mildly_Infuriated_Peasant</object>
@@ -42,17 +53,13 @@
         <object>objects\Hateful_Spirit</object>
       </objects>
     </objects>
-    <objects name="Parents">
-      <object>objects\Creature</object>
-      <object>objects\Card</object>
-      <object>objects\AIParent</object>
-    </objects>
     <objects name="Buttons">
       <objects name="MainMenu">
         <object>objects\PlayButtonObj</object>
       </objects>
       <objects name="DeckSelectionScreen">
         <object>objects\DefaultDeckButton</object>
+        <object>objects\GhostDeckButton</object>
       </objects>
     </objects>
     <objects name="BKG">
