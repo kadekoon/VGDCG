@@ -6,9 +6,10 @@
 
 //Still need to add support for heroes and powers. And, you know, make them.
 
-if (argument1 == 0) {
+show_debug_message("Create Deck Script Called");
+global.p1DeckStack = ds_stack_create();
 
-    global.p1DeckStack = ds_stack_create();
+if (argument1 == 0) {
 
     switch (argument0) {      //Argument0 is DeckID, basically what deck to use
     case 1: 
@@ -25,7 +26,7 @@ if (argument1 == 0) {
        }
     break;
     
-    default: 
+    case -1:
     show_message("Err: No Deck Selected for Player");
     break;
     }//End switch
@@ -33,3 +34,5 @@ if (argument1 == 0) {
     //Here, we create the deck object for the relevant player and place it.
     //
 } //End player block}
+show_debug_message("Reached End of Create Deck");
+

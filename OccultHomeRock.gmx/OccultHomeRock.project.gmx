@@ -26,16 +26,20 @@
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
-    <script>scripts\Game_Start_Script.gml</script>
+    <script>scripts\Minion_Combat_Script.gml</script>
     <script>scripts\Draw_Cards_Script.gml</script>
     <script>scripts\Draw_Stats_Script.gml</script>
-    <script>scripts\Minion_Combat_Script.gml</script>
-    <script>scripts\Create_Deck_Script.gml</script>
-    <script>scripts\Game_End_Script.gml</script>
-    <script>scripts\Place_Card_In_Hand.gml</script>
     <scripts name="Particles">
       <script>scripts\GhostlyParticleBattleCry.gml</script>
       <script>scripts\DestroyPartSys.gml</script>
+    </scripts>
+    <script>scripts\TSP_.gml</script>
+    <script>scripts\script10.gml</script>
+    <scripts name="Eventual">
+      <script>scripts\Game_Start_Script.gml</script>
+      <script>scripts\Place_Card_In_Hand.gml</script>
+      <script>scripts\Game_End_Script.gml</script>
+      <script>scripts\Create_Deck_Script.gml</script>
     </scripts>
   </scripts>
   <objects name="objects">
@@ -45,12 +49,12 @@
       <object>objects\Card</object>
       <object>objects\AIParent</object>
     </objects>
-    <objects name="Creatures">
+    <objects name="Cards">
       <objects name="0 Drops">
         <object>objects\Mildly_Infuriated_Peasant</object>
       </objects>
       <objects name="4 Drops">
-        <object>objects\Hateful_Spirit</object>
+        <object>objects\Hateful_Spirit_Card</object>
       </objects>
     </objects>
     <objects name="Buttons">
@@ -71,12 +75,13 @@
     <objects name="Controllers">
       <object>objects\HandController</object>
       <object>objects\EnemyHandController</object>
-      <object>objects\PlayerDeck</object>
+      <object>objects\PlayerDeckDemo</object>
     </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\Menu</room>
     <room>rooms\Deck_Selection</room>
+    <room>rooms\DemoRoom</room>
     <room>rooms\Game_Room</room>
   </rooms>
   <help>
