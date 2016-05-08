@@ -19,6 +19,7 @@ instance_create(PeasantAI, 0,0);
 //script_execute(Create_Deck_Script(0,deck))
 
 //Draw initial hands
+Draw_Cards_Script(7,1);
 //Flip a coin to figure out who starts first
 
 //Trigger the start of the turn

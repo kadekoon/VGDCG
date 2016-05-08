@@ -13,6 +13,7 @@ if (player == 1) {  //Use
         switch cardID { 
         case 1: 
         //make peasant
+        instance_create(x, y, Mildly_Infuriated_Peasant);
         break;
         
         case 2:
